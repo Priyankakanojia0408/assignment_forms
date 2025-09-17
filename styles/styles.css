@@ -1,0 +1,68 @@
+/* basic reset */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: #9cbfbf;   /* teal background*/
+    padding:40px;
+}
+
+/* MAIN CARD*/
+.card {
+    display:flex;
+    width:880px;
+    max-width:95%;
+    height:380px;
+    background: linear-gradient(90deg, #a61414 0 60%, #f3a93a 60% 100%);
+    box-shadow: o 12px 30px rgba( 0, 0, 0, 0.25);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+/* LEFT COLUMN(FORM)*/
+.left {
+    flex:1;
+    padding: 40px 36px;
+    background: linear-gradient( 180deg, rgba(0, 0, 0.34), rgba (0, 0, 0.02));
+    color: #fff;
+    display:flex;
+    align-items: flex-start;
+}
+
+.contact-form {
+    width:100%
+}
+
+/* LABELS AND INPUTS*/
+.label {
+    display:block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.95;
+}
+
+.input, .textarea {
+    display:block;
+    width:100px;
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding:8px 4px;
+    color:rgba(255, 255, 255, 0.95);
+    margin-bottom: 20px;
+    outline:none;
+    font-size: 14px;
+}
+
+/* textarea should be bigger*/
+.textarea {
+    resize:none;
+    height:70px;
+}
