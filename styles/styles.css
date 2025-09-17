@@ -66,3 +66,25 @@ html,body {
     resize:none;
     height:70px;
 }
+
+/* BUTTON ROW */
+.btn-row{
+    margin-top: 6px;
+}
+
+/*BUTTON STYLING FOR TEAL*/
+.btn{
+   background: ;
+}
+
+/* RIGHT COLUMN FOR IMAGE*/
+.right {
+     display:flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width:360px;
+    position:relative;
+}
+
+}
