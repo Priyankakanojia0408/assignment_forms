@@ -16,27 +16,30 @@ html,body {
 /* MAIN CARD*/
 .card {
     display:flex;
-    width:880px;
+    width:780px;
     max-width:95%;
-    height:380px;
+    height:500px;
     background: linear-gradient(90deg, #a61414 0 60%, #f3a93a 60% 100%);
     box-shadow: o 12px 30px rgba( 0, 0, 0, 0.25);
     border-radius: 2px;
-    overflow: hidden;
+    position: relative; /* make the card refernce for */
+    
 }
 
 /* LEFT COLUMN(FORM)*/
 .left {
     flex:1;
-    padding: 40px 36px;
+    padding: 40px;
     background: linear-gradient( 180deg, rgba(0, 0, 0.34), rgba (0, 0, 0.02));
     color: #fff;
+    flex-direction:column;
     display:flex;
-    align-items: flex-start;
+    /*align-items: flex-start;*/
+    justify-content:space-between;
 }
 
 .contact-form {
-    width:100%
+    width:100vh;
 }
 
 /* LABELS AND INPUTS*/
@@ -69,22 +72,80 @@ html,body {
 
 /* BUTTON ROW */
 .btn-row{
-    margin-top: 6px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 /*BUTTON STYLING FOR TEAL*/
 .btn{
-   background: ;
+   background: #0f6767;
+   color: #fff;
+   border:none;
+   padding: 12px 30px;
+   border-radius: 30px;
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.35);
+   cursor:pointer;
+   font-weight: 700;
+   letter-spacing: 1px;
+}
+.btn:hover {
+    background-color: #094747;             /* slightly darker teal on hover */
+    transform: scale(1.05);                /* make button slightly bigger */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.4); /* deeper shadow on hover */
 }
 
 /* RIGHT COLUMN FOR IMAGE*/
 .right {
-     display:flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    flex:1;
     background: transparent;
-    width:360px;
+    width:380px;
     position:relative;
+    overflow: visible;
+    height: 100%;
 }
 
+/* DUCK IMAGE OVERSIZED AND SHIFTED TO LEFT */
+.duck{
+    /*display: flex;*/
+    width: 663px;
+    height: 450px;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    z-index: 2;
+   /* left: -10px; 
+    border: 2px solid red;*/
+    transform: translate(-50%,-50%);
+    /*object-fit: contain;
+    filter: saturate(1.05);*/
+    
+} 
+
+.left, .right {
+    flex:1;
+    position:relative;
+}
+/* RESPONSIVE: STACK COLUMN ON SMALLER SCREENS */
+@media (max-width: 720px)
+{
+ 
+.card{
+    flex-direction: column;
+    height: auto;
+}
+.right{
+    width: 100%; 
+    padding: 20px;
+}
+.duck {
+    width: 60%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    top:50%;
+}
+.left {
+    padding: 24px;
+}
 }
