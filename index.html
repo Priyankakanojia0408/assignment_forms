@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Card</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
     <div class="page">
@@ -12,17 +13,17 @@
             <div class="left">
                 <!-- LEFT COLUMN: FORM -->
                 <form class="contact-form" action="#" method="post">
-                    <label class="label">FULL NAME</label>
-                    <input type="text" placeholder="Your Name" class="input"/>
+                    <label for="fullname" class="label">FULL NAME</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your Name" class="input" required/>
 
-                    <label class="label">EMAIL</label>
-                    <input type="email" placeholder="Your Email" class="input"/>
+                    <label for="email" class="label">EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="input" required/>
 
-                    <label class="label">MESSAGE REGARDING</label>
-                    <input type="text" placeholder="Subject" class="input"/>
+                    <label for="subject" class="label">MESSAGE REGARDING</label>
+                    <input type="text"  id="subject" name="subject" placeholder="Subject" class="input" required/>
 
-                    <label class="label">MESSAGE</label>
-                    <textarea placeholder="Your message" class="textarea"></textarea>
+                    <label for="message" class="label">MESSAGE</label>
+                    <textarea  id="message" name="message" placeholder="Your message" class="textarea" required></textarea>
 
                     <div class="btn-row">
                         <button type="submit" class="btn">SEND MESSAGE</button>
